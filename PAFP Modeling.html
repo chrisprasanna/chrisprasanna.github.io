@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Data-Driven Modeling of Human-Robot System - Chris Prasanna</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+					<h1><a style="font-size:1.2em;" href="index.html">Chris Prasanna</a></h1>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>								
+							<li><a href="index.html#AboutMe" class="button icon solid fa-user">About Me</a></li>
+							<li><a href="index.html#Skills" class="button icon solid fa-book">Skills</a></li> <!-- tools, abaqus, lightbulb, book-->
+							<li><a href="index.html#Projects" class="button icon solid fa-project-diagram">Projects</a>
+								<ul>
+									<li><a href="PAFP Controller.html">Robotic Foot-Ankle Prosthesis Controller</a></li>
+									<li><a href="PAFP Modeling.html">Data-Driven Modeling of Human-Robot</a></li>
+									<li><a href="Tetris AI.html">Tetris-Playing AI Agent</a></li>
+									<li><a href="Biplane Fluoroscopy.html">X-Ray Video-Based 3D Motion Tracking</a></li>
+									<li><a href="Temperature FB Controller.html">Environmental Feedback Controller</a></li>
+									<li><a href="Material Testing.html">Automated Material Testing & Analysis</a></li>
+									<li><a href="Capstone.html">CP Rehab. Product Design & Fabrication</a></li>
+									<li><a href="Trike.html">Electric Off-Road Trike Design Project</a></li>
+									<li><a href="SO.html">Special Olympics Award Stand Project</a></li>
+								</ul>
+							</li>
+							<li><a href="./downloads/Chris_Prasanna_Resume.pdf" download="ChrisPrasanna_Resume"  class="button alt icon solid fa-download">Résumé</a></li>
+							<li><a href="./downloads/CV - July 2021.pdf" download="ChrisPrasanna_CV" class="button alt icon solid fa-download" >Curriculum Vitae</a></li>
+							<li><a href="./downloads/Chris Prasanna Engineering Portfolio.pdf" download="ChrisPrasanna_Portfolio" class="button alt icon solid fa-download">Portfolio PDF</a></li>
+							<li><a href="https://www.linkedin.com/in/chrisprasanna/" class="button alt2 icon brands fa-linkedin-in">LinkedIn</a></li>
+							<li><a href="https://github.com/chrisprasanna" class="button alt2 icon brands fa-github">GitHub</a></li>
+						</ul>
+					</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<!-- Content -->
+							<article class="box post">
+								<div class="slider-container">
+									<span id="slider-image-1"></span>
+									<span id="slider-image-2"></span>
+									<span id="slider-image-3"></span>
+									<span id="slider-image-4"></span>
+									<div class="image-container">
+										<img src="images/DL/ffnn.png" class="slide-image">
+										<img src="images/DL/gru.png" class="slide-image">
+										<img src="images/DL/dagru.png" class="slide-image">
+										<img src="images/DL/results.png" class="slide-image">
+									</div>
+									<div class="button-container">
+										<a href="#slider-image-1" class="slider-button"></a>
+										<a href="#slider-image-2" class="slider-button"></a>
+										<a href="#slider-image-3" class="slider-button"></a>
+										<a href="#slider-image-4" class="slider-button"></a>
+									</div>
+								</div> 
+								<!-- <a href="#" class="image centered img"><img src="images/JR Dynamic.png" alt="" /></a> -->
+								<header>
+									<h2>Data-Driven Modeling of Human-Robot System</h2>
+									<p>Master's Thesis</p>
+								</header>
+								<section>
+									<header>
+										<h3>Project Goal</h3>
+									</header>
+									<p>
+										Given the increasing amount of data available, the development of advanced machine and deep learning techniques 
+										toward robotic prosthesis applications is now possible. The goal of this project was to develop data-driven models to 
+										output forward predictions of a prototype prosthetic's ankle torque values.  
+
+									</p>
+									<p>
+										Modeling these human-robot system dynamics would be useful for understanding the system behavior and planning 
+										control actions accordingly. A system model can also allow for model-based control methods to be used, which 
+										are much more sample-efficient and converge much quicker when compared to model-free techniques. 
+									</p>
+								</section>
+								<header>
+									<h3>Challenges</h3>
+								</header>
+								<p>
+									Despite their promise, data-driven regression models have not been implemented in robotic prosthesis control and 
+									modeling human-prosthesis dynamical behavior remains a challenge due to highly nonlinear behavior. Traditional 
+									system identification techniques are limited since they require some knowledge of the system, cannot learn 
+									spatial-temporal relationships on their own, and cannot extract the most important features from a dataset.    
+								</p>
+								<header>
+									<h3>My Solution</h3>
+								</header>
+								<p>
+									To account for the nonlinear dynamics of the system, deep neural network (DNN) architectures with internal state 
+									(memory) gates were trained to better predict sudden dynamic changes and possible disturbances to the system. 
+									Additionally, attention mechanisms were investigated in order to enhance and devote more computational power to 
+									the small but important subset of the feature space while fading out the rest.
+								</p>
+								<header>
+									<h3>Notable Features & Accomplishments</h3>
+								</header>
+								<p>
+									<u1>
+										<li>Three deep neural network architectures were developed and trained: (i) feedforward network (FFN), 
+											(ii) gated recurrent unit (GRU), and (iii) dual-stage attention-based gated recurrent unit (DA-GRU)</li>
+										<li>Gate mechanisms were added which add information to or remove information from the state across timesteps, making them 
+											particularly effective for learning temporal dependencies</li>
+										<li>Attention mechanisms were included which adaptively extract the most relevant features and hidden state information using 
+											an encoder-decoder architecture</li>
+										<li>Machine learning data processing methods such as tensor conversion, shuffling, mini-batches, 
+											feature normalization, data augmentation, and rolling lookback time windows were utilized for improved 
+											network training</li>
+										<li>Network training hyperparameters were optimized using the Optuna framework which utilized Bayesian search 
+											techniques and trial pruning</li>
+										<li>Implemented validation dataset evaluation and an early stopping protocol in order to reduce the chance of overfitting</li>
+									</u1>
+								</p>
+								<header>
+									<h3>Skills Used</h3>
+								</header>
+								<p>
+									<u1>
+										<li>Python</li>
+										<li>Pytorch</li>
+										<li>Deep Learning</li>
+										<li>Machine Learning</li>
+										<li>Hyperparameter Optimization (Optuna)</li>
+										<li>System Identification</li>
+										<li>Time Series Analysis & Forecasting</li>
+										<li>Feature Manipulation</li>
+										<li>Data Anlaysis</li>
+									</u1>
+								</p>
+							</article>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-6 col-12-medium">
+							<section>
+								<header>
+									<h2>Downloads</h2>
+								</header>
+								<nav id="nav">
+									<ul>		
+										<li><a href="./downloads/Chris_Prasanna_Resume.pdf" download="ChrisPrasanna_Resume"  class="button icon solid fa-download">Résumé</a></li>
+										<li><a href="./downloads/CV - July 2021.pdf" download="ChrisPrasanna_CV" class="button icon solid fa-download">CV</a></li>
+										<li><a href="./downloads/Chris Prasanna Engineering Portfolio.pdf" download="ChrisPrasanna_Portfolio" class="button icon solid fa-download">Portfolio PDF</a></li>
+									</ul>
+								</nav>
+							</section>
+						</div>
+
+						<div class="col-6 col-12-medium">
+							<section>
+								<header>
+									<h2>Links</h2>
+								</header>
+								<ul class="social">
+									<li><a class="icon brands fa-linkedin" href="https://www.linkedin.com/in/chrisprasanna/"><span class="label">LinkedIn</span></a></li>
+									<li><a class="icon brands fa-github" href="https://github.com/chrisprasanna"><span class="label">Github</span></a></li>
+								</ul>
+							</section>
+						</div>
+
+						<div class="col-12">
+
+							<!-- Copyright -->
+								<div id="copyright">
+									<ul class="links">
+										<li>Copyright &copy; 2021 by Chris Prasanna. All rights reserved.</li>
+									</ul>
+								</div>
+
+						</div>
+					</div>
+				</div>
+			</section>	
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

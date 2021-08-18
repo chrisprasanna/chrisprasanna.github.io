@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Tetris-Playing Artificial Intelligence Agent - Chris Prasanna</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+					<h1><a style="font-size:1.2em;" href="index.html">Chris Prasanna</a></h1>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>								
+							<li><a href="index.html#AboutMe" class="button icon solid fa-user">About Me</a></li>
+							<li><a href="index.html#Skills" class="button icon solid fa-book">Skills</a></li> <!-- tools, abaqus, lightbulb, book-->
+							<li><a href="index.html#Projects" class="button icon solid fa-project-diagram">Projects</a>
+								<ul>
+									<li><a href="PAFP Controller.html">Robotic Foot-Ankle Prosthesis Controller</a></li>
+									<li><a href="PAFP Modeling.html">Data-Driven Modeling of Human-Robot</a></li>
+									<li><a href="Tetris AI.html">Tetris-Playing AI Agent</a></li>
+									<li><a href="Biplane Fluoroscopy.html">X-Ray Video-Based 3D Motion Tracking</a></li>
+									<li><a href="Temperature FB Controller.html">Environmental Feedback Controller</a></li>
+									<li><a href="Material Testing.html">Automated Material Testing & Analysis</a></li>
+									<li><a href="Capstone.html">CP Rehab. Product Design & Fabrication</a></li>
+									<li><a href="Trike.html">Electric Off-Road Trike Design Project</a></li>
+									<li><a href="SO.html">Special Olympics Award Stand Project</a></li>
+								</ul>
+							</li>
+							<li><a href="./downloads/Chris_Prasanna_Resume.pdf" download="ChrisPrasanna_Resume"  class="button alt icon solid fa-download">Résumé</a></li>
+							<li><a href="./downloads/CV - July 2021.pdf" download="ChrisPrasanna_CV" class="button alt icon solid fa-download" >Curriculum Vitae</a></li>
+							<li><a href="./downloads/Chris Prasanna Engineering Portfolio.pdf" download="ChrisPrasanna_Portfolio" class="button alt icon solid fa-download">Portfolio PDF</a></li>
+							<li><a href="https://www.linkedin.com/in/chrisprasanna/" class="button alt2 icon brands fa-linkedin-in">LinkedIn</a></li>
+							<li><a href="https://github.com/chrisprasanna" class="button alt2 icon brands fa-github">GitHub</a></li>
+						</ul>
+					</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<!-- Content -->
+							<article class="box post">
+								<div class="slider-container">
+									<span id="slider-image-1"></span>
+									<span id="slider-image-2"></span>
+									<span id="slider-image-3"></span>
+									<span id="slider-image-4"></span>
+									<div class="image-container">
+										<img src="images/Tetris/agent.png" class="slide-image">
+										<img src="images/Tetris/results.png" class="slide-image">
+										<img src="images/Tetris/ga.png" class="slide-image">
+										<img src="images/Tetris/cem.png" class="slide-image">
+									</div>
+									<div class="button-container">
+										<a href="#slider-image-1" class="slider-button"></a>
+										<a href="#slider-image-2" class="slider-button"></a>
+										<a href="#slider-image-3" class="slider-button"></a>
+										<a href="#slider-image-4" class="slider-button"></a>
+									</div>
+								</div> 
+								<!-- <a href="#" class="image centered img"><img src="images/JR Dynamic.png" alt="" /></a> -->
+								<header>
+									<h2>Tetris-Playing Artificial Intelligence Agent</h2>
+									<p>Graduate Project</p>
+								</header>
+								<section>
+									<header>
+										<h3>Project Goal</h3>
+									</header>
+									<p>
+										The goal of this project was to build a Tetris-playing AI that 
+										improved with experience and could clear over 10,000 
+										lines on average before losing. 
+									</p>
+								</section>
+								<header>
+									<h3>Challenges</h3>
+								</header>
+								<p>
+									One of the most important design choices to make was choosing which 
+									features to include in the cost function. This process is important because 
+									too few features can limit the performance of the agent while too many irrelevant 
+									features can cause the agent to learn based off features that are not helpful to 
+									the problem.
+								</p>
+								<p>
+									State representation is also a challenge for designing artificial players.  On the 
+									standard Tetris game, the total number of states is 10<sup>60</sup> which cannot be explored 
+									directly. Therefore, approximation and learning techniques must be implemented. 
+									The learning strategy must converge quickly and optimize the cost function based on 
+									a combination of exploitation and exploration in order to achieve the best performance. 
+								</p>
+								<header>
+									<h3>My Solution</h3>
+								</header>
+								<p>
+									The reinforcement learning framework involved extracting relevant features from the environment, 
+									using them to set up a linear cost function, simulating the cost for all possible actions, using 
+									these costs to inform the decision-making process, and repeating until the agent loses the game. 
+									During training, the top eight performing agents of a generation (training iteration) make up an elite set and move 
+									on to the next generation. This elite set is then used to “reproduce” 32 “child” parameter sets. 
+									These steps repeat for 20 generations and the best-performing agent in the final generation is 
+									selected as the optimized parameter set.
+								</p>
+								<p>
+									Features were chosen based on aspects of the game that the player will want to either minimize or maximize. 
+									For instance, a successful player will likely try to maximize the number of cleared lines 
+									while avoiding features such as holes, row transitions, and column transitions. Additionally, a linear cost function was 
+									chosen due to its simple structure which can reduce training time. The program only needs to 
+									learn coefficients associated with each feature as opposed to polynomials, combination functions, or other 
+									nonlinear functions.
+								</p>
+								<header>
+									<h3>Notable Features & Accomplishments</h3>
+								</header>
+								<p>
+									<u1>
+										<li>Algorithms are implemented in an OpenAI Gym environment where 5 roll-outs are simulated for each parameter 
+											set and the average reward is evaluated.</li>
+										<li>One agent learned through a genetic algorithm which kept elite sets of reward function parameters while 
+											producing other similar sets to use in the next generation.</li>
+										<li>A second agent learned through the cross-entropy method which uses a sampling-based search for control 
+											environments then updates the distribution based on which samples scored the highest.</li>
+										<li>The optimized AI agent cleared an average of 88,563 lines and the maximum cleared lines in a single game 
+											was 332,896. The Guinness Record for lines cleared by a human player is 4,988. </li>
+									</u1>
+								</p>
+								<header>
+									<h3>Skills Used</h3>
+								</header>
+								<p>
+									<u1>
+										<li>Python</li>
+										<li>Reinforcement Learning</li>
+										<li>Algorithm Implementation</li>
+										<li>Black Box Optimization</li>
+										<li>Genetic / Evolutionary Algorithms</li>
+										<li>Feature Selection</li>
+									</u1>
+								</p>
+							</article>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-6 col-12-medium">
+							<section>
+								<header>
+									<h2>Downloads</h2>
+								</header>
+								<nav id="nav">
+									<ul>		
+										<li><a href="./downloads/Chris_Prasanna_Resume.pdf" download="ChrisPrasanna_Resume"  class="button icon solid fa-download">Résumé</a></li>
+										<li><a href="./downloads/CV - July 2021.pdf" download="ChrisPrasanna_CV" class="button icon solid fa-download">CV</a></li>
+										<li><a href="./downloads/Chris Prasanna Engineering Portfolio.pdf" download="ChrisPrasanna_Portfolio" class="button icon solid fa-download">Portfolio PDF</a></li>
+									</ul>
+								</nav>
+							</section>
+						</div>
+
+						<div class="col-6 col-12-medium">
+							<section>
+								<header>
+									<h2>Links</h2>
+								</header>
+								<ul class="social">
+									<li><a class="icon brands fa-linkedin" href="https://www.linkedin.com/in/chrisprasanna/"><span class="label">LinkedIn</span></a></li>
+									<li><a class="icon brands fa-github" href="https://github.com/chrisprasanna"><span class="label">Github</span></a></li>
+								</ul>
+							</section>
+						</div>
+
+						<div class="col-12">
+
+							<!-- Copyright -->
+								<div id="copyright">
+									<ul class="links">
+										<li>Copyright &copy; 2021 by Chris Prasanna. All rights reserved.</li>
+									</ul>
+								</div>
+
+						</div>
+					</div>
+				</div>
+			</section>	
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

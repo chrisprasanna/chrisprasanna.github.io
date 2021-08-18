@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Robotic Foot-Ankle Prosthesis Controller  - Chris Prasanna</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+					<h1><a style="font-size:1.2em;" href="index.html">Chris Prasanna</a></h1>
+
+					<!-- Nav -->
+					<!-- Change -->
+						<!-- <nav id="nav">
+							<ul>
+								<li><a href="index.html#target1" class="button">Back to Portfolio</a></li>
+							</ul>
+						</nav> -->
+						<nav id="nav">
+							<ul>								
+								<li><a href="index.html#AboutMe" class="button icon solid fa-user">About Me</a></li>
+								<li><a href="index.html#Skills" class="button icon solid fa-book">Skills</a></li> <!-- tools, abaqus, lightbulb, book-->
+								<li><a href="index.html#Projects" class="button icon solid fa-project-diagram">Projects</a>
+									<ul>
+										<li><a href="PAFP Controller.html">Robotic Foot-Ankle Prosthesis Controller</a></li>
+									<li><a href="PAFP Modeling.html">Data-Driven Modeling of Human-Robot</a></li>
+									<li><a href="Tetris AI.html">Tetris-Playing AI Agent</a></li>
+									<li><a href="Biplane Fluoroscopy.html">X-Ray Video-Based 3D Motion Tracking</a></li>
+									<li><a href="Temperature FB Controller.html">Environmental Feedback Controller</a></li>
+									<li><a href="Material Testing.html">Automated Material Testing & Analysis</a></li>
+									<li><a href="Capstone.html">CP Rehab. Product Design & Fabrication</a></li>
+									<li><a href="Trike.html">Electric Off-Road Trike Design Project</a></li>
+									<li><a href="SO.html">Special Olympics Award Stand Project</a></li>
+									</ul>
+								</li>
+								<li><a href="./downloads/Chris_Prasanna_Resume.pdf" download="ChrisPrasanna_Resume"  class="button alt icon solid fa-download">Résumé</a></li>
+								<li><a href="./downloads/CV - July 2021.pdf" download="ChrisPrasanna_CV" class="button alt icon solid fa-download" >Curriculum Vitae</a></li>
+								<li><a href="./downloads/Chris Prasanna Engineering Portfolio.pdf" download="ChrisPrasanna_Portfolio" class="button alt icon solid fa-download">Portfolio PDF</a></li>
+								<li><a href="https://www.linkedin.com/in/chrisprasanna/" class="button alt2 icon brands fa-linkedin-in">LinkedIn</a></li>
+								<li><a href="https://github.com/chrisprasanna" class="button alt2 icon brands fa-github">GitHub</a></li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<!-- Content -->
+							<article class="box post">
+								<div class="slider-container">
+									<span id="slider-image-1"></span>
+									<span id="slider-image-2"></span>
+									<span id="slider-image-3"></span>
+									<span id="slider-image-4"></span>
+									<span id="slider-image-5"></span>
+									<!-- <span id="slider-image-6"></span> -->
+									<div class="image-container">
+										<img src="images/PAFP control/walking.png" class="slide-image">
+										<img src="images/PAFP control/schematic.png" class="slide-image">
+										<img src="images/PAFP control/bd.png" class="slide-image">
+										<img src="images/PAFP control/emb.png" class="slide-image">
+										<!-- <img src="images/PAFP control/diagram.png" class="slide-image"> -->
+										<img src="images/PAFP control/flowchart.png" class="slide-image">
+									</div>
+									<div class="button-container">
+										<a href="#slider-image-1" class="slider-button"></a>
+										<a href="#slider-image-2" class="slider-button"></a>
+										<a href="#slider-image-3" class="slider-button"></a>
+										<a href="#slider-image-4" class="slider-button"></a>
+										<a href="#slider-image-5" class="slider-button"></a>
+										<!-- <a href="#slider-image-6" class="slider-button"></a> -->
+									</div>
+								</div> 
+								<!-- <a href="#" class="image centered img"><img src="images/JR Dynamic.png" alt="" /></a> -->
+								<header>
+									<h2>Robotic Foot-Ankle Prosthesis Controller</h2>
+									<p>Master's Thesis</p>
+								</header>
+								<section>
+									<header>
+										<h3>Project Goal</h3>
+									</header>
+									<p>
+										The gait of below-knee amputees exhibits a large number of asymmetries between limbs 
+										when compared to able-bodied gait. This can lead to very serious long-term medical 
+										conditions such as osteoarthritis. 
+									</p>
+									<p>
+										The objective of this project was to design a controller that coordinates 
+										the action of a powered ankle-foot prosthesis (PAFP) in order to minimize asymmetries 
+										between the lower limbs. Additionally, the controller must adapt to load-carrying conditions. 
+									</p>
+								</section>
+								<header>
+									<h3>Challenges</h3>
+								</header>
+								<p>
+									Common challenges for PAFP controller designs include: (i) accounting for personalized altered 
+									body mechanics of the amputee, (ii) avoiding manual tuning of subject-specific control 
+									parameters, and (iii) designing a control law that automatically adapts to the user and 
+									environment. Additionally, many control approaches rely on finite states are not continuous or 
+									adaptive to variable conditions. 
+								</p>
+								<header>
+									<h3>My Solution</h3>
+								</header>
+								<p>
+									The controller was designed to be adaptive through the use of time-invariant state estimations 
+									which anticipate important gait events and variability. Additionally, a data-driven iterative learning 
+									trajectory optimization was implemented to reduce ankle kinematic asymmetries between the prosthetic and 
+									intact limbs. Furthermore, subject parameter tuning is unnecessary and there is no need for able-bodied 
+									trajectory data.
+
+								</p>
+								<header>
+									<h3>Notable Features & Accomplishments</h3>
+								</header>
+								<p>
+									<ul>
+										<li>Data-driven iterative learning control utilizing adaptive learning gains and inverse 
+											transfer function model generation</li>
+										<li>Continuous state estimation based on wearable sensors, coordinate transforms, 
+											adaptive parameters, and PCA analysis</li>
+										<li>First-principles inverse model of the prototype PAFP's drivetrain used for low-level tracking control</li>
+										<li>Real-time LabVIEW code for executing deterministic control laws, sensor fusion, 
+											signal processing, data logging, and HMI commands via a wireless network</li>
+										<li>Custom embedded system which encloses circuitry, sensor interfaces, microcontrollers, 
+											shielding, and power connections within a 3D-printed case</li>
+									  </ul>
+								</p>
+								<header>
+									<h3>Skills Used</h3>
+								</header>
+								<p>
+								<u1>
+									<li>Robotic/Mechatronic System Design</li>
+									<li>Real-Time Adaptive Control</li>
+									<li>Rapid Embedded System Prototyping (3D Printing & Machining)</li>
+									<li>Sensor Integration & Digital Signal Processing</li>
+									<li>HMI/GUI Development</li>
+									<li>Reliability Testing & Device Performance Analysis</li>
+									<li>LabVIEW</li>
+									<li>MATLAB</li>
+									<li>DAQ</li>
+								</u1>
+								</p>
+							</article>
+
+					</div>
+				</section>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-6 col-12-medium">
+							<section>
+								<header>
+									<h2>Downloads</h2>
+								</header>
+								<nav id="nav">
+									<ul>		
+										<li><a href="./downloads/Chris_Prasanna_Resume.pdf" download="ChrisPrasanna_Resume"  class="button icon solid fa-download">Résumé</a></li>
+										<li><a href="./downloads/CV - July 2021.pdf" download="ChrisPrasanna_CV" class="button icon solid fa-download">CV</a></li>
+										<li><a href="./downloads/Chris Prasanna Engineering Portfolio.pdf" download="ChrisPrasanna_Portfolio" class="button icon solid fa-download">Portfolio PDF</a></li>
+									</ul>
+								</nav>
+							</section>
+						</div>
+
+						<div class="col-6 col-12-medium">
+							<section>
+								<header>
+									<h2>Links</h2>
+								</header>
+								<ul class="social">
+									<li><a class="icon brands fa-linkedin" href="https://www.linkedin.com/in/chrisprasanna/"><span class="label">LinkedIn</span></a></li>
+									<li><a class="icon brands fa-github" href="https://github.com/chrisprasanna"><span class="label">Github</span></a></li>
+								</ul>
+							</section>
+						</div>
+
+						<div class="col-12">
+
+							<!-- Copyright -->
+								<div id="copyright">
+									<ul class="links">
+										<li>Copyright &copy; 2021 by Chris Prasanna. All rights reserved.</li>
+									</ul>
+								</div>
+
+						</div>
+					</div>
+				</div>
+			</section>	
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
