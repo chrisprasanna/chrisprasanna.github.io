@@ -2282,10 +2282,11 @@ input, select, textarea {
 		}
 
 		#banner header {
-			background-color: rgba(34, 30, 31, 0.98);
+			background-color: 	#101010;
 			display: inline-block;
 			padding: 4em 8em 4em 8em; /* changed from 2.5em 5em; */
 			border-radius: 5px;
+			border: 5px solid #fff;
 			/* text-align: center; */
 		}
 
