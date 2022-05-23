@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Robotic Foot-Ankle Prosthesis Controller  - Chris Prasanna</title>
+		<title>Robotic Prosthetic Ankle Controller - Chris Prasanna</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -27,9 +27,9 @@
 							<li><a href="right-sidebar.html">Right Sidebar</a></li>
 							<li><a href="no-sidebar.html">No Sidebar</a></li> --> 
 							
-							<li><a href="#AboutMe" class="button icon solid fa-user">About Me</a></li>
-							<li><a href="#Skills" class="button icon solid fa-puzzle-piece">Skills</a></li> <!-- tools, abaqus, lightbulb, book-->
-							<li><a href="#Projects" class="button icon solid fa-wrench">Projects</a>
+							<li><a href="index.html#AboutMe" class="button icon solid fa-user">About Me</a></li>
+							<li><a href="index.html#Skills" class="button icon solid fa-puzzle-piece">Skills</a></li> <!-- tools, abaqus, lightbulb, book-->
+							<li><a href="index.html#Projects" class="button icon solid fa-wrench">Projects</a>
 								<ul>
 									<li><a href="PAFP Controller.html">Robotic Prosthesis Controller</a></li>
 									<li><a href="PAFP Modeling.html">Modeling a Human-Robot System using Deep Learning</a></li>
@@ -70,11 +70,12 @@
 									<!-- <span id="slider-image-6"></span> -->
 									<div class="image-container">
 										<img src="images/PAFP control/walking.png" class="slide-image">
+										<img src="images/PAFP control/setup.png" class="slide-image">
 										<img src="images/PAFP control/schematic.png" class="slide-image">
-										<img src="images/PAFP control/bd.png" class="slide-image">
-										<img src="images/PAFP control/emb.png" class="slide-image">
+										<!--<img src="images/PAFP control/bd.png" class="slide-image"> -->
 										<!-- <img src="images/PAFP control/diagram.png" class="slide-image"> -->
-										<img src="images/PAFP control/flowchart.png" class="slide-image">
+										<img src="images/PAFP control/ankle_powers.png" class="slide-image">
+										<img src="images/PAFP control/learning.png" class="slide-image">
 									</div>
 									<div class="button-container">
 										<a href="#slider-image-1" class="slider-button"></a>
@@ -92,27 +93,36 @@
 								</header>
 								<section>
 									<header>
+										<h3>Links</h3>
+									</header>
+									<p>
+										<u1>
+											<li><a href="https://digital.lib.washington.edu/researchworks/handle/1773/48532">Thesis</a> </li>
+										</u1>						 
+									</p>
+								</section>
+									<header>
 										<h3>Project Goal</h3>
 									</header>
 									<p>
-										There are a large number of gait asymmetries seen in individuals with lower limb loss 
-										when compared to able-bodied individuals. Since asymmetrical loading of the lower limbs 
-										can lead to serious long-term medical conditions, such as osteoarthritis, efforts must 
-										be made toward designing prosthesis systems that provide proper ankle function. 
+										The main goal of this research is to develop a personalized and adaptive control scheme for powered ankle-foot prostheses. 
+										Individuals with below-knee amputation generally have gait patterns that are more asymmetrical about their two limbs when 
+										compared to the general population. This is likely due to a lack of proper prosthetic ankle function. It has been observed 
+										that these individuals compensate for this lack of mobility in ways that can lead to a host of long-term musculoskeletal 
+										impairments (e.g., osteoarthritis in the knee and hip of the intact limb). 
 									</p>
 									<p>
-										The objective of this project was to design a controller that coordinates 
-										the action of a powered ankle-foot prosthesis (PAFP) in order to minimize asymmetries 
-										between the lower limbs. Additionally, the controller must adapt to and maintain symmetrical 
-										gait during load-carrying conditions. 
+										Powered prostheses have the ability to better emulate biological ankles since they are capable of generating power, unlike 
+										clinically-prescribed limbs that are completely passive and can only return stored energy. However, current powered prosthesis 
+										control methods are over-reliant on able-bodied data, require extensive amounts of tuning by experts, and cannot adapt to the user's 
+										unique gait patterns. This work directly addresses all the listed limitations with an adaptive and data-driven control strategy. 
 									</p>
-								</section>
 								<header>
 									<h3>Challenges</h3>
 								</header>
 								<p>
-									Common challenges for PAFP controller designs include: (i) accounting for personalized altered 
-									body mechanics of the amputee, (ii) avoiding manual tuning of subject-specific control 
+									Common challenges for prosthesis controller designs include: (i) accounting for personalized altered 
+									body mechanics of the user, (ii) avoiding manual tuning of subject-specific control 
 									parameters, and (iii) designing a control law that automatically adapts to the user and 
 									environment. Additionally, many control approaches rely on finite states are not continuous or 
 									adaptive to variable conditions. 
@@ -121,25 +131,37 @@
 									<h3>My Solution</h3>
 								</header>
 								<p>
-									The controller was designed to be adaptive through the use of time-invariant state estimations 
-									which anticipate important gait events and variability. Additionally, a data-driven iterative learning 
-									trajectory optimization was implemented to reduce ankle kinematic asymmetries between the prosthetic and 
-									intact limbs. Furthermore, subject parameter tuning is unnecessary and there is no need for able-bodied 
-									trajectory data.
+									This work
+									directly addresses all these limitations with a personalized
+									and data-driven control strategy. The controller utilizes
+									time-invariant control signals enabled by phase-based state
+									estimation and an iterative learning strategy that adjusts
+									the impedance characteristics of the prosthetic ankle to
+									match the dynamics of the intact ankle. The controller was
+									experimentally evaluated on two individuals with transtibial
+									amputation.
 
+								</p>
+								<p>
+									The control scheme successfully increased
+									ankle angle symmetry about the two limbs by 25.3%. In
+									addition, the symmetry controller significantly increased
+									peak prosthetic ankle power output at push-off by 110% and significantly reduced loads on the intact limb
+									commonly associated with osteoarthritis. Therefore, this
+									research demonstrates the benefits of personalized and
+									data-driven symmetry controllers for powered prosthetic limbs.
 								</p>
 								<header>
 									<h3>Notable Features & Accomplishments</h3>
 								</header>
 								<p>
 									<ul>
-										<li>Data-driven iterative learning control utilizing adaptive learning gains and inverse 
-											transfer function model generation</li>
+										<li>Data-driven iterative learning control utilizing adaptive learning gains and controller personalization</li>
 										<li>Continuous state estimation based on wearable sensors, coordinate transforms, 
 											adaptive parameters, and PCA analysis</li>
-										<li>First-principles inverse model of the prototype PAFP's drivetrain used for low-level tracking control</li>
-										<li>Real-time LabVIEW code for executing deterministic control laws, sensor fusion, 
-											signal processing, data logging, and HMI commands via a wireless network</li>
+										<li>First-principles inverse model of the actuator</li>
+										<li>Real-time code written in LabVIEW for executing deterministic control laws, sensor fusion, 
+											signal processing, data logging, and user commands via a wireless network</li>
 										<li>Custom embedded system which encloses circuitry, sensor interfaces, microcontrollers, 
 											shielding, and power connections within a 3D-printed case</li>
 									  </ul>
@@ -148,18 +170,39 @@
 									<h3>Skills Used</h3>
 								</header>
 								<p>
-								<u1>
-									<li>Robotic/Mechatronic System Design</li>
-									<li>Real-Time Adaptive Control</li>
-									<li>Rapid Embedded System Prototyping (3D Printing & Machining)</li>
-									<li>Sensor Integration & Digital Signal Processing</li>
-									<li>HMI/GUI Development</li>
-									<li>Reliability Testing & Device Performance Analysis</li>
-									<li>LabVIEW</li>
-									<li>MATLAB</li>
-									<li>DAQ</li>
-								</u1>
+
+
+									<u1>
+										<li>Robotic System Design</li>
+										<li>Real-Time Control</li>
+										<li>Adaptive Control</li>
+										<li>Adaptive Learning Algorithms</li>
+										<li>Trajectory Optimization</li>
+										<li>State Estimation</li>
+										<li>Nonlinear Systems</li>
+										<li>Embedded Systems</li>
+										<li>Microcontrollers</li>
+										<li>Motor Control</li>
+										<li>Mechatronics</li>
+										<li>3D Printing</li>
+										<li>Machining</li>
+										<li>Troubleshooting</li>
+										<li>Sensor Integration</li>
+										<li>Signal Processing</li>
+										<li>Bench Testing</li>
+										<li>Field Testing</li>
+										<li>HW/SW-in-the-Loop Testing</li>
+										<li>Frequency Analysis</li>
+										<li>Robotics Middleware Design</li>
+										<li>Software Architecture Design</li>
+										<li>Plant Modeling</li>
+										<li>LabVIEW</li>
+										<li>MATLAB</li>
+										<li>Data Acquisition</li>
+									</u1>
+								
 								</p>
+								
 								<header>
 									<h3>Citation</h3>
 								</header>

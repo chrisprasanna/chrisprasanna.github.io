@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Data-Driven Modeling of Human-Robot System - Chris Prasanna</title>
+		<title>Modeling a Human-Robot System using Deep Learning - Chris Prasanna</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -27,9 +27,9 @@
 							<li><a href="right-sidebar.html">Right Sidebar</a></li>
 							<li><a href="no-sidebar.html">No Sidebar</a></li> --> 
 							
-							<li><a href="#AboutMe" class="button icon solid fa-user">About Me</a></li>
-							<li><a href="#Skills" class="button icon solid fa-puzzle-piece">Skills</a></li> <!-- tools, abaqus, lightbulb, book-->
-							<li><a href="#Projects" class="button icon solid fa-wrench">Projects</a>
+							<li><a href="index.html#AboutMe" class="button icon solid fa-user">About Me</a></li>
+							<li><a href="index.html#Skills" class="button icon solid fa-puzzle-piece">Skills</a></li> <!-- tools, abaqus, lightbulb, book-->
+							<li><a href="index.html#Projects" class="button icon solid fa-wrench">Projects</a>
 								<ul>
 									<li><a href="PAFP Controller.html">Robotic Prosthesis Controller</a></li>
 									<li><a href="PAFP Modeling.html">Modeling a Human-Robot System using Deep Learning</a></li>
@@ -65,18 +65,15 @@
 									<span id="slider-image-1"></span>
 									<span id="slider-image-2"></span>
 									<span id="slider-image-3"></span>
-									<span id="slider-image-4"></span>
 									<div class="image-container">
-										<img src="images/DL/ffnn.png" class="slide-image">
-										<img src="images/DL/gru.png" class="slide-image">
-										<img src="images/DL/dagru.png" class="slide-image">
-										<img src="images/DL/results.png" class="slide-image">
+										<img src="images/DL/all_dnns.png" class="slide-image">
+										<img src="images/DL/pred_plots.png" class="slide-image">
+										<img src="images/DL/pred_bar.png" class="slide-image">
 									</div>
 									<div class="button-container">
 										<a href="#slider-image-1" class="slider-button"></a>
 										<a href="#slider-image-2" class="slider-button"></a>
 										<a href="#slider-image-3" class="slider-button"></a>
-										<a href="#slider-image-4" class="slider-button"></a>
 									</div>
 								</div> 
 								<!-- <a href="#" class="image centered img"><img src="images/JR Dynamic.png" alt="" /></a> -->
@@ -86,38 +83,81 @@
 								</header>
 								<section>
 									<header>
+										<h3>Links</h3>
+									</header>
+									<p>
+										<u1>
+											<li><a href="https://digital.lib.washington.edu/researchworks/handle/1773/48532">Thesis</a> </li>
+											<li><a href="https://figshare.com/s/be2380eb4d649d07718b">IEEE Preprint</a></li>
+										</u1>						 
+									</p>
+								</section>
+									<header>
 										<h3>Project Goal</h3>
 									</header>
 									<p>
-										Given the increasing amount of data available, the development of advanced machine and deep learning techniques 
-										toward robotic prosthesis applications is now possible. The goal of this project was to develop data-driven models to 
-										output forward predictions of a prototype prosthetic's ankle torque values.  
+										Inverse dynamics from motion capture is the
+										most common technique for analyzing human biomechanics. However, this method is time-intensive, limited to a gait
+										laboratory setting, and requires a large array of reflective
+										markers to be attached to the body. A practical alternative
+										must be developed to provide biomechanical information to
+										high-bandwidth robotic prosthesis control systems to enable predictive controllers.  
 
 									</p>
 									<p>
-										Modeling these human-robot system dynamics would be useful for understanding the system behavior and planning 
-										control actions accordingly. A system model can also allow for model-based control methods to be used, which 
-										are much more sample-efficient and converge much quicker when compared to model-free techniques. 
+										While the ultimate goal is to implement a model-based
+										control strategy for prosthetic devices, a key milestone and
+										the focus of this project was the development of models that can
+										predict ankle mechanics, i.e., inverse dynamics. In addition, the model inputs
+										must only include signals from sensors that can be integrated with a real-time 
+										control system. 
 									</p>
-								</section>
 								<header>
 									<h3>Challenges</h3>
 								</header>
 								<p>
-									Since modeling human-prosthesis dynamical behavior is challenging due to highly nonlinear behavior,  
-									data-driven regression models have not been applied toward robotic prosthesis control. Traditional 
-									system identification techniques have been attempted but are limited since they require some knowledge 
-									of the system, cannot learn 
-									spatial-temporal relationships on their own, and cannot extract the most important features from a dataset.    
+									Modeling and predicting human-prosthesis behavior is challenging due to highly nonlinear system dynamics, 
+									adaptations from the user, and a limited set of model inputs from wearable sensors. Most biomechanics 
+									research up to this point has been limited to human intent or activity classifiers for 
+									finite state machines. While
+									these studies show the potential of using large datasets for
+									assistive device applications, the field has not fully explored
+									using non-categorical training data to build predictive models
+									of human-robot dynamical systems (e.g, estimating dynamics
+									that cannot be observed instantaneously). If system models can be derived from available data, many model-based and 
+									continuous control methods would possible in the context of prosthetics research. 
 								</p>
 								<header>
 									<h3>My Solution</h3>
 								</header>
 								<p>
-									To account for the nonlinear dynamics of the system, deep neural network (DNN) architectures with internal state 
-									(memory) gates were trained to better predict sudden dynamic changes and possible disturbances to the system. 
-									Additionally, attention mechanisms were investigated in order to enhance and devote more computational power to 
-									the small but important subset of the feature space while fading out the rest.
+									Three deep neural network (DNN) models were trained to provide accurate total ankle torque predictions
+									using model inputs that can be measured in real-time (i.e.,
+									encoder, load cell, and IMU outputs).  
+									Each DNN
+									was trained to predict ankle torques from inverse dynamics
+									one sample into the future. The one-sample ahead prediction
+									performances of the DNNs are then directly compared to
+									the one-sample ahead prediction performance of an analytical
+									model of the human-prosthesis system, which was derived based on first
+									principles. The ability of each DNN to predict twenty samples,
+									approximately half a gait cycle, into the future was also assessed.
+									Additionally, a hyperparameter optimization protocol was conducted which automatically selected the model architectures and learning parameters that
+									resulted in the most accurate predictions. 
+								</p>
+								<p>
+									The trained deep neural networks predict ankle torques one
+									sample into the future with an average root-mean-square error (RMSE) of 0.04±0.02
+									Nm/kg, corresponding to 2.9±1.6% of the ankle torque's
+									dynamic range. Comparatively, a manually-derived analytical regression model predicted ankle torques with a RMSE
+									of 0.35±0.53 Nm/kg, corresponding to 26.6±40.9% of the
+									ankle torque's dynamic range. In addition, the deep neural
+									networks predicted ankle torque values half a gait cycle into
+									the future with an average drop in performance of 1.7%
+									of the ankle torque's dynamic range. This application of
+									deep learning provides an avenue towards the development
+									of predictive control systems for powered limbs aimed at
+									optimizing prosthetic ankle torque.
 								</p>
 								<header>
 									<h3>Notable Features & Accomplishments</h3>
@@ -134,8 +174,8 @@
 											feature normalization, data augmentation, and rolling lookback time windows were utilized for improved 
 											network training</li>
 										<li>Network training hyperparameters were optimized using the Optuna framework which utilized Bayesian search 
-											techniques and trial pruning</li>
-										<li>Implemented validation dataset evaluation and an early stopping protocol in order to reduce the chance of overfitting</li>
+											and pruning techniques</li>
+										<li>Validation datasets and an early stopping protocol were implemented in order to reduce the chances of overfitting</li>
 									</u1>
 								</p>
 								<header>
@@ -144,14 +184,25 @@
 								<p>
 									<u1>
 										<li>Python</li>
-										<li>Pytorch</li>
+										<li>PyTorch</li>
 										<li>Deep Learning</li>
 										<li>Machine Learning</li>
-										<li>Hyperparameter Optimization (Optuna)</li>
+										<li>Neural Networks</li>
+										<li>GRU</li>
+										<li>Attention Mechanisms</li>
+										<li>Hyperparameter Optimization</li>
+										<li>Neural Network Architecture Optimization</li>
+										<li>Optuna</li>
 										<li>System Identification</li>
+										<li>Predictive Modeling</li>
 										<li>Time Series Analysis & Forecasting</li>
 										<li>Feature Manipulation</li>
 										<li>Data Analysis</li>
+										<li>Data Collection</li>
+										<li>Supervised Learning</li>
+										<li>Regression</li>
+										<li>Least-Squares</li>
+										<li>Optimization</li>
 									</u1>
 								</p>
 							</article>
