@@ -61,7 +61,8 @@
 					<div class="container">
 						<!-- Content -->
 							<article class="box post">
-								<div class="slider-container">
+
+								<!-- <div class="slider-container">
 									<span id="slider-image-1"></span>
 									<span id="slider-image-2"></span>
 									<span id="slider-image-3"></span>
@@ -78,7 +79,47 @@
 										<a href="#slider-image-3" class="slider-button"></a>
 										<a href="#slider-image-4" class="slider-button"></a>
 									</div>
-								</div> 
+								</div> -->
+
+								<div class="slideshow-container">
+									<!-- Full-width images with number and caption text -->
+									<div class="mySlides fade">
+									  <div class="numbertext">1 / 4</div>
+									  <img src="images/Brooks/load.png" style="width:100%">
+									  <div class="text"></div>
+									</div>
+								  
+									<div class="mySlides fade">
+									  <div class="numbertext">2 / 4</div>
+									  <img src="images/Brooks/fatigue.png" style="width:100%">
+									  <div class="text"></div>
+									</div>
+								  
+									<div class="mySlides fade">
+									  <div class="numbertext">3 / 4</div>
+									  <img src="images/Brooks/bend.png" style="width:100%">
+									  <div class="text"></div>
+									</div>
+
+									<div class="mySlides fade">
+										<div class="numbertext">4 / 4</div>
+										<img src="images/Brooks/results.png" style="width:100%">
+										<div class="text"></div>
+									  </div>
+								  
+									<!-- Next and previous buttons -->
+									<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+									<a class="next" onclick="plusSlides(1)">&#10095;</a>
+								  </div>
+								  <br>								  
+								<!-- The dots/circles -->
+								<div style="text-align:center">
+									<span class="dot" onclick="currentSlide(1)"></span>
+									<span class="dot" onclick="currentSlide(2)"></span>
+									<span class="dot" onclick="currentSlide(3)"></span>
+									<span class="dot" onclick="currentSlide(4)"></span>
+								</div>
+
 								<!-- <a href="#" class="image centered img"><img src="images/JR Dynamic.png" alt="" /></a> -->
 								<header>
 									<h2>Automated Material Testing & Analysis</h2>
@@ -119,26 +160,28 @@
 									<h3>Notable Features & Accomplishments</h3>
 								</header>
 								<p>
-									<u1>
+									<ul>
 										<li>Custom MATLAB scripts designed for data processing automation and organization. </li>
 										<li>Reduced the amount of time needed to complete the product testing and analysis pipeline by 66%. </li>
 										<li>Reported mechanical testing results to a multidisciplinary and cross-functional team for future 
 											product development strategies. </li>
-									</u1>
+									</ul>
 								</p>
 								<header>
 									<h3>Skills Used</h3>
 								</header>
 								<p>
-									<u1>
+									<ul class="three-cols">
 										<li>MATLAB</li>
-										<li>Protocol Development</li>
+										<li>Testing Protocol Design</li>
 										<li>Automation</li>
 										<li>Data Processing</li>
 										<li>Data Analysis</li>
 										<li>Mechanical Testing</li>
-										<li>Reliability Testing & Anlaysis</li>
-									</u1>
+										<li>Characterization</li>
+										<li>Reliability Testing & Analysis</li>
+										<li>Tableau</li>
+									</ul>
 								</p>
 							</article>
 
@@ -200,6 +243,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/slideshow.js"></script>
 
 	</body>
 </html>
