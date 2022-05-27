@@ -3162,24 +3162,7 @@ input, select, textarea {
   to {opacity: 1}
 }
 
-/* Image Captions on Hover */
-a {
-	position: relative
-  }
-  
-  a span {
-	display: none;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	padding: 10px;
-	background: rgba(255,255,255,.8);
-  }
-  
-  a:hover span {
-	display: block
-  }
-
+/* Multiple column lists */
 .two-cols {
 	columns: 2;
   	-webkit-columns: 2;
@@ -3200,3 +3183,5 @@ a {
   	-moz-columns: 4;
 	padding-left: 1em;
 }
+
+
