@@ -2231,7 +2231,7 @@ input, select, textarea {
 				}
 
 				#nav > ul > li:hover > a, #nav > ul > li.active > a {
-					background: #D3D3D3;
+					opacity: 50%;
 				}
 
 				#nav > ul > li.current > a {
@@ -2246,7 +2246,7 @@ input, select, textarea {
 		background-color: rgba(34, 30, 31, 0.98);
 		padding: 1.25em 1.5em 1.25em 1.5em;
 		font-style: italic;
-		min-width: 13em;
+		min-width: 30em;
 		box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
 		text-align: left;
 		margin-top: -1.25em;
@@ -2269,6 +2269,9 @@ input, select, textarea {
 
 			.dropotron li:hover > a, .dropotron li:hover > span {
 				color: #fff;
+				display: block;
+				background-color: black;
+				padding-left: 1em;
 			}
 
 		.dropotron.level-0 {
@@ -3235,8 +3238,8 @@ input, select, textarea {
 	position: fixed;
 	bottom: 16px;
 	right:32px;
-	width:60px;
-	height:50px;
+	width:2.5em;
+	height:2.5em;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -3253,6 +3256,10 @@ input, select, textarea {
 	bottom:32px;
 	pointer-events: auto;
 	opacity:1;
+  }
+
+  .to-top:hover {
+	opacity: 50%;
   }
 
 
