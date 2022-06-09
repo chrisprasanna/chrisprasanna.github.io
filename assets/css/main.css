@@ -2254,7 +2254,7 @@ input, select, textarea {
 		background-color: rgba(34, 30, 31, 0.98);
 		padding: 1.25em 1.5em 1.25em 1.5em;
 		font-style: italic;
-		min-width: 30em;
+		min-width: 15px;
 		box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
 		text-align: left;
 		margin-top: -1.25em;
