@@ -38,6 +38,8 @@
 
 		gtag('config', 'G-DVWSHECDHH');
 		</script>
+
+		<!-- Header and Footer -->
 		
 	</head>
 	<body class="homepage is-preload">
@@ -51,11 +53,7 @@
 
 					<!-- Nav -->
 						<nav id="nav">
-							<ul>
-								<!-- <li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li> --> 
-								
+							<ul>						
 								<li><a href="#AboutMe" class="button icon solid fa-user">About Me</a></li>
 								<li><a href="#Skills" class="button icon solid fa-puzzle-piece">Skills</a></li> <!-- tools, abaqus, lightbulb, book-->
 								<li>
@@ -72,19 +70,16 @@
 										<li><a href="SO.html">Special Olympics Award Stand Project</a></li>
 									</ul>
 								</li>
-								<!-- <li><a href="./downloads/Chris_Prasanna_Resume.pdf" download="ChrisPrasanna_Resume" class="button alt icon solid fa-download">Résumé</a></li> -->
+
 								<li><a href="./downloads/ChrisPrasanna_CV_May2022.pdf" download="ChrisPrasanna_CV" class="button alt icon solid fa-download" >CV</a></li>
 								<li><a href="./downloads/Chris Prasanna Engineering Portfolio.pdf" download="ChrisPrasanna_Portfolio" class="button alt icon solid fa-download">Portfolio PDF</a></li>
 								<li><a href="https://www.linkedin.com/in/chrisprasanna/" class="button alt2 icon brands fa-linkedin-in" target="_blank">LinkedIn</a></li>
 								<li><a href="https://github.com/chrisprasanna" class="button alt2 icon brands fa-github" target="_blank">GitHub</a></li>
-
-								<!-- <li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/chrisprasanna/"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/chrisprasanna" class="icon brands fa-github"><span class="label">Github</span></a></li> -->
 							</ul>
 
 						</nav>
 
-					<!-- Banner -->
+						<!-- Banner -->
 						<section id="banner">
 							<header>
 								<h2>Chris Prasanna</h2>
@@ -92,26 +87,9 @@
 								<p>Robotics, Machine Learning, & Controls</p>
 							</header>
 						</section>
-
-					<!-- About Me -->
-					<!-- <div class="col-8 col-12-medium">
-						<article class="box post">
-							<header>
-								<h2>About Me</h2>
-							</header>
-							<p>
-								Detail-oriented mechatronics engineer passionate about advancing control 
-								applications through high-quality research and creative problem solving.  
-							</p>
-							<p>
-								Hands-on experience developing real-time robotic control systems and highly 
-								proficient in modern control methods, rapid prototyping, embedded systems, 
-								programming, and data science.
-							</p>
-					
-						</article>
-					</div> --> 
-				</section>
+				</section>	
+				
+				<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/assets/php/"; include($IPATH."headernav.html"); ?>
 
 				<!-- About Me -->
 				<section id="aboutme">
@@ -517,6 +495,8 @@
 						</div>
 					</div>
 				</section>
+
+				<?php include($IPATH."footer.html"); ?>
 
 		</div>
 
