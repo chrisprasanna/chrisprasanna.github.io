@@ -2188,7 +2188,7 @@ input, select, textarea {
 		position: relative;
 		background: #ffffff;
 		border-bottom: solid 1px #ccc;
-		padding: 3em 0 3em 0; /* 5em 0 4em 0; */ /* 3em 0 3em 0; */
+		padding: 3em 0 1em 0; /* 5em 0 4em 0; */ /* 3em 0 3em 0; */
 		text-align: center;
 	}
 
@@ -2311,6 +2311,7 @@ input, select, textarea {
 			position: relative;
 			padding: 8em 0;
 			margin: 4em 0 0 0; /* changed from 4em 0 0 0; */
+			margin-top: -0.5em;
 		}
 
 		#banner header {
